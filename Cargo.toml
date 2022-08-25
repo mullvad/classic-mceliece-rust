@@ -58,6 +58,10 @@ hex = "0.4.3"
 [profile.dev]
 opt-level = 1 # reduces runtime for KATNUM=2 from 281s to 11s
 
+[profile.release]
+# `lto = true` should also work
+lto = 'fat'
+
 [package.metadata.docs.rs]
 # Uses the #[doc(feature(...))] functionality to clearly show in the generated documentation
 # which feature of this crate is needed for each type and function to be available.
