@@ -1,5 +1,4 @@
 #![doc = include_str!("../README.md")]
-#![no_std]
 #![forbid(unsafe_code)]
 #![cfg_attr(docsrs, feature(doc_cfg))]
 
@@ -480,7 +479,7 @@ mod kem_api {
             crate::operations::crypto_kem_enc(
                 &mut ciphertext_buf,
                 shared_secret_buf,
-                recip_pubkey.0.as_ref(),
+                dbg!(recip_pubkey).0.as_ref(),
                 csprng,
             );
             Ok((
